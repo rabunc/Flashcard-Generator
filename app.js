@@ -239,7 +239,7 @@ var clozeCardList = data.cards.cloze_card;
 var clozeQuestions = [];
 
 for (i = 0; i < clozeCardList.length; i++) {
-    var q = new clozeCard(clozeCardList[i].fullText, basicCardList[i].cloze)
+    var q = new clozeCard(clozeCardList[i].fullText, clozeCardList[i].cloze)
     clozeQuestions.push(q)
 }
 
@@ -265,7 +265,7 @@ function reviewClozeCard() {
             console.log("Answer: " + clozeQuestions[currentQuestion].fullText + "\n")
             if (currentQuestion < clozeQuestions.length - 1) {
                 currentQuestion++
-                reviewBasicCard()
+                reviewClozeCard()
             } else {
                 console.log("Game Over!")
                 console.log("Correct Answers: " + answerRight)
