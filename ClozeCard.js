@@ -6,8 +6,8 @@ function ClozeCard(text, cloze) {
         this.cloze = cloze;
         this.fullText = text;
     } else {
-        // log an error
-        console.log("Error! Cloze is not in text!")
-        process.exit()
+        // // log an error
+        // console.log("Error! Cloze is not in text!")
+        // process.exit()
     }
 }
